@@ -9,7 +9,11 @@ class Cache {
 private:
   // TODO: private inner struct/class 선언 가능
   // TODO: private 멤버 변수와 함수 추가 가능
-  // enum dataType {int, double};
+
+  struct {
+
+  };
+
   class Node {
     private:
       std::string key;
@@ -26,7 +30,11 @@ private:
       Node* getNext() {
         return next;
       }
-      
+
+      std::string getKey() {
+        return key;
+      }
+       
       void setNext(Node* node) {
         next = node;
       }
@@ -35,7 +43,7 @@ private:
     private:
       const int HASH_SIZE = 10;
     public:
-      int Hash::hash(std::string key);
+      int hash(std::string key);
   };
   Node* head;
   int size;
